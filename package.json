@@ -1,13 +1,12 @@
 {
-  "name": "blotter",
+  "name": "ink-blotter",
   "version": "0.1.0",
   "description": "An engine for displaying Ink stories in the browser, using InkJS",
   "files": [
-    "build"
+    "build/blotter.js"
   ],
   "scripts": {
-    "test_build": "webpack ./lib/index.js ./test/build/blotter.js",
-    "test_watch": "webpack --watch ./lib/index.js ./test/build/blotter.js",
+    "watch": "webpack --watch",
     "prepublish": "webpack"
   },
   "author": {

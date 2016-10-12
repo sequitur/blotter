@@ -1,0 +1,72 @@
+@import 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i';
+
+body,html {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#content-container {
+  height: 95vh;
+  max-width: 40rem;
+  margin: auto;
+  #story-stage {
+    height: calc(100% - 3rem);
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    p {
+      animation: 1s fadein;
+    }
+
+  }
+
+  #choices {
+    height: 3rem;
+    margin: 0;
+    padding: 0;
+    .choices {
+      animation: .5s fadein;
+      display: flex;
+      flex-flow: row wrap;
+      margin: 0;
+      padding: 0;
+
+      li {
+        background: #ddc;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        display: block;
+        list-style: none;
+        margin: .1rem;
+        font-size: 1.5rem;
+        padding: .25rem;
+        flex-grow: 1;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+          background: #ccd;
+        }
+      }
+
+      &.old {
+        opacity: 0;
+        transition: opacity .5s;
+      }
+    }
+  }
+}
+
+/* Hide scrollbars in webkit... */
+::-webkit-scrollbar {
+  display: none;
+}

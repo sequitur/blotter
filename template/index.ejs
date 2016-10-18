@@ -20,8 +20,7 @@
 
     <!-- Script tag at the end so it runs after the DOM is ready.-->
     <!-- Note that in a real application, the script would be inlined. -->
-    <script type="text/javascript">
-      <%= compilation.assets[htmlWebpackPlugin.files.js[0].substr(htmlWebpackPlugin.files.publicPath.length)].source() %>
+    <script type="text/javascript" src="blotter.js">
     </script>
     <script type="text/javascript">
     blotterStart();

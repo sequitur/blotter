@@ -6,6 +6,8 @@ Currently, Blotter is a proof-of-concept project. See [gall](http://github.com/s
 
 ## Usage
 
+### As a standalone js file
+
 Use Gall. This information is provided mostly for documentation purposes.
 
 If not using Gall, get the bundled Blotter file from the repository or npm and inline or include it at the end of your html page's body. The page should contain the following structure in its body:
@@ -20,6 +22,10 @@ You will also need a CSS that at the very least applies certain transitions and 
 The other thing you need is to inline the compiled json from your ink story, output by inklecate, into the head of the html file. You need a `<script type="application/json" id="storyscript">` tag. Blotter looks for those specific attributes.
 
 Blotter attaches two things to the global `window` object: `story` is the actual Inkjs story object, and can be used to attach events to variable changes within Ink or implement game saving/loading. `blotterStart` is a function that, when called, starts the main blotter UI loop.
+
+### As an npm module
+
+You can also use your own bundling/build system (such as browserify, webpack, or brunch) to assemble apps with blotter. In that case, you can install blotter from npm as usual, and then in your main script: `const blotter = require('blotter')`. `blotter.start()` starts the main UI loop; `blotter.story` is a reference to the Ink story object.
 
 ## Additional features
 

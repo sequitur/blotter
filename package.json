@@ -3,8 +3,10 @@
   "version": "0.2.5",
   "description": "An engine for displaying Ink stories in the browser, using InkJS",
   "files": [
-    "build/blotter.js"
+    "build/blotter.js",
+    "build/index.js"
   ],
+  "main": "build/index.js",
   "scripts": {
     "watch": "webpack --watch",
     "prepublish": "webpack"

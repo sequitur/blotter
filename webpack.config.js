@@ -1,10 +1,13 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './lib/index.js',
+  entry: {
+    blotter: './lib/blotter.js',
+    index: './lib/index.js'
+  },
   output: {
     path: './build',
-    filename: 'blotter.js',
+    filename: '[name].js',
     publicPath: '/'
   },
   loaders: [

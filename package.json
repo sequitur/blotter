@@ -1,6 +1,6 @@
 {
   "name": "ink-blotter",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "An engine for displaying Ink stories in the browser, using InkJS",
   "files": [
     "build/blotter.js"

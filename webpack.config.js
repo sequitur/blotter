@@ -1,8 +1,11 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   entry: './lib/index.js',
   output: {
     path: './build',
-    filename: 'blotter.js'
+    filename: 'blotter.js',
+    publicPath: '/'
   },
   loaders: [
     {
@@ -13,5 +16,11 @@ module.exports = {
         presets: ['es2015']
       }
     }
+  ],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'template/index.ejs',
+      inject: false
+    })
   ]
 };

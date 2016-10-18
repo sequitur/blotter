@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>Blotter Test App</title>
+    <script id="storyscript" type="application/json">
+      <%= require('raw!../test/example.ink.json').trim() %>
+    </script>
+    <style media="screen">
+      <%= require('raw!less!../test/style/style.less') %>
+    </style>
+  </head>
+  <body>
+    <div id="content-container">
+      <div id="story-stage">
+      </div>
+      <div id="choices">
+      </div>
+    </div>
+
+    <!-- Script tag at the end so it runs after the DOM is ready.-->
+    <!-- Note that in a real application, the script would be inlined. -->
+    <script type="text/javascript">
+      <%= compilation.assets[htmlWebpackPlugin.files.js[0].substr(htmlWebpackPlugin.files.publicPath.length)].source() %>
+    </script>
+    <script type="text/javascript">
+    blotterStart();
+    </script>
+  </body>
+</html>

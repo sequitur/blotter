@@ -1,6 +1,6 @@
 {
   "name": "ink-blotter",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "An engine for displaying Ink stories in the browser, using InkJS",
   "files": [
     "build/blotter.js",
@@ -19,7 +19,7 @@
   "repository": "sequitur/blotter",
   "license": "MIT",
   "dependencies": {
-    "inkjs": "^1.4.1"
+    "inkjs": "^1.5.1"
   },
   "devDependencies": {
     "babel": "^6.5.2",

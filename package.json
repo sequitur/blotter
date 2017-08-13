@@ -19,7 +19,7 @@
   "repository": "sequitur/blotter",
   "license": "MIT",
   "dependencies": {
-    "inkjs": "^1.5.1"
+    "inkjs": "^1.6.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",

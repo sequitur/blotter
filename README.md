@@ -31,4 +31,6 @@ You can also use your own bundling/build system (such as browserify, webpack, or
 
 Blotter interprets underscore characters as signaling _emphasis_ and __strong__ in the same way as markdown. Note that it will only read them on word boundaries. It will also automagically turn ' and " characters into smart "curly" quotes. A hyphen (-) surrounded by spaces will be converted into an en dash; two hyphens into an em dash. Following the most common usage conventions, en dashes are spaced, while em dashes are not.
 
-Paragraphs starting with h1 will be rendered as h1 header elements; the same is true of h2, h3, h4, h5, and h6.
+Blotter has some inherent support for Ink tags. Tags surrounded by angle brackets, like `<h1>` or `<h3>` will be rendered as that html element, instead of a normal paragraph `<p>`. Tags that start with a dot, like `.red` or `.emphasis` will apply that class to the element, making it possible to style it.
+
+Paragraphs starting with h1 will be rendered as h1 header elements; the same is true of h2, h3, h4, h5, and h6. **This feature is deprecated and might be removed entirely in a future release.**
